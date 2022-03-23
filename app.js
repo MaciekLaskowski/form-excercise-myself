@@ -13,12 +13,15 @@ function onSubmit(e){
         formText.classList.add("red");
         formText.textContent = "Name and mail inputs can't be empty"
     } else if(nameInput.value === ""){
+        formText.classList.remove("green");
         formText.classList.add("red");
         formText.textContent = "Name input can't be empty"
     } else if(mailInput.value === ""){
+        formText.classList.remove("green");
         formText.classList.add("red");
         formText.textContent = "Mail input can't be empty"
     } else{
+        formText.classList.remove("red");
         formText.classList.add("green");
         formText.textContent = "Submited!";
 
@@ -26,6 +29,8 @@ function onSubmit(e){
         li.appendChild(document.createTextNode(`${nameInput.value}: ${mailInput.value}`));
         list.appendChild(li);
 
+        mailInput.value = "";
+        nameInput.value = "";
     }
 }
 

@@ -85,9 +85,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 
 .my-form{
+    position: relative;
     border-top-left-radius: 37px 140px;
     border-top-right-radius: 23px 130px;
     border-bottom-left-radius: 110px 19px;
@@ -117,6 +119,11 @@ body{
 
 .green{
     color: green;
+}
+
+.list{
+    position: absolute;
+    top: 48rem;
 }
 
 
