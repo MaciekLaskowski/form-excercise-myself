@@ -10,6 +10,7 @@ myForm.addEventListener("submit", onSubmit);
 function onSubmit(e){
     e.preventDefault();
     if(nameInput.value === "" && mailInput.value === ""){
+        formText.classList.remove("green");
         formText.classList.add("red");
         formText.textContent = "Name and mail inputs can't be empty"
     } else if(nameInput.value === ""){
