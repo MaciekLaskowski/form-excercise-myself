@@ -18,6 +18,14 @@ function onSubmit(e){
     } else if(mailInput.value === ""){
         formText.classList.add("red");
         formText.textContent = "Mail input can't be empty"
+    } else{
+        formText.classList.add("green");
+        formText.textContent = "Submited!";
+
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(`${nameInput.value}: ${mailInput.value}`));
+        list.appendChild(li);
+
     }
 }
 
